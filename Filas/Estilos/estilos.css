@@ -1,10 +1,14 @@
 body{
   font-family: arial;
+  max-width: 1200px;
 }
 
 .container{
   display: grid;
-  grid-template-columns: 25% 50% 25%;
+/* grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 300px 300px;
+  grid-template: filas / columnas; */
+  grid-template: 300px 100px 100px / 50% 200% 100%;
 }
 .item{
   background: lightblue;
