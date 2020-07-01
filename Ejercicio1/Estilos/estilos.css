@@ -1,0 +1,112 @@
+body{
+  height: 1500px;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  height: 100%;
+  display: grid;
+  grid-template-columns: [izquierda] 10% [derecha] 90%;
+  grid-template-rows: [arriba] 100px [abajo] 90%;
+  grid-area: "header header"
+             "menu contenido"
+             "menu contenido";
+}
+
+.item{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.item:nth-of-type(1){
+  grid-area: header;
+  grid-column: izquierda / 3;
+  grid-row: arriba / 2;
+  padding: 0;
+}
+  .cabecera{
+    background-color: lavender;
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+    height: 100%;
+  }
+  .search{
+    align-content: center;  
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+  }
+  .acount{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .profilepic{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid black;
+  }
+
+.item:nth-of-type(2){
+  grid-area: menu;
+  grid-column: izquierda / 2;
+  grid-row: 2 / abajo;
+}
+.item:nth-of-type(3){
+  grid-area: contenido;
+  grid-column: 2 / abajo;
+  grid-row: 2 / derecha;
+}
+  .movie-list{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: [start] 400px 400px 400px [end];
+    grid-template-rows: repeat(6, 50px 200px);
+    grid-gap: 10px;
+    overflow: hidden;
+    margin: 20px;
+    justify-content: center;
+  }
+  .movie-link{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  .movie-container{   
+    background-color: khaki;
+    height: 100%;
+    margin: 0;
+  }
+  .movie-overlay{
+    background: rgba(255, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    text-align: left;
+  }
+  .movie-link:hover .movie-overlay{
+    display: flex;
+  }
+
+  .categorie{
+    grid-column: start / end;
+  }
