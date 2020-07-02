@@ -1,5 +1,46 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?j6nljt');
+  src:  url('../fonts/icomoon.eot?j6nljt#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?j6nljt') format('truetype'),
+    url('../fonts/icomoon.woff?j6nljt') format('woff'),
+    url('../fonts/icomoon.svg?j6nljt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-whatshot:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\e901";
+}
+.icon-home:before {
+  content: "\e902";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+
+
 body{
-  height: 1500px;
+  height: 100vh;
   width: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,6 +54,8 @@ body{
   grid-area: "header header"
              "menu contenido"
              "menu contenido";
+  overflow: hidden;
+  /* overflow: scroll; */
 }
 
 .item{
@@ -45,6 +88,7 @@ body{
     width: 100%;
     height: 20px;
     margin: 0 auto;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.4));
   }
   .acount{
     display: flex;
@@ -63,11 +107,53 @@ body{
   grid-column: izquierda / 2;
   grid-row: 2 / abajo;
 }
+  .item.menu{
+    height: 100%;
+  }
+  .menu{
+    height: 100%;
+    display: block;
+    align-content: center;
+  }
+  .windows{
+    height: 100%;
+    position: relative;
+/*     justify-content: space-between; */
+  }
+  .item .menu a{
+    display: flex;
+  }
+  .windows i{
+    font-size: 40px;
+    text-align: center;
+    background-size: 40px 40px;
+    margin: 20px auto 0;
+  }
+  .window-name{
+    height: 20px;
+    text-align: center;
+  }
+  .configuration{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+  }
+  .configurations i{
+    font-size: 40px;
+    text-align: center;
+    background-size: 40px 40px;
+    margin: 20px auto 0
+  }
+}
+
 .item:nth-of-type(3){
   grid-area: contenido;
   grid-column: 2 / abajo;
   grid-row: 2 / derecha;
 }
+  .item.contenido{
+    overflow: scroll;
+  }
   .movie-list{
     height: auto;
     width: auto;
@@ -75,9 +161,8 @@ body{
     grid-template-columns: [start] 400px 400px 400px [end];
     grid-template-rows: repeat(6, 50px 200px);
     grid-gap: 10px;
-    overflow: hidden;
+
     margin: 20px;
-    justify-content: center;
   }
   .movie-link{
     cursor: pointer;
