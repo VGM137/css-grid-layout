@@ -50,7 +50,7 @@ body{
 .container{
   height: 100%;
   display: grid;
-  grid-template-columns: [izquierda] 10% [derecha] 90%;
+  grid-template-columns: [izquierda] 8% [derecha] 92%;
   grid-template-rows: [arriba] 100px [abajo] 90%;
   grid-area: "header header"
              "menu contenido"
@@ -171,14 +171,26 @@ body{
   grid-column: 2 / abajo;
   grid-row: 2 / derecha;
 }
-    .item.contenido{
+    .contenido{
       overflow: scroll;
+      margin: 0 auto;
+    }
+    .contenido::-webkit-scrollbar{
+      width: 10px;
+    }
+    .contenido::-webkit-scrollbar-track{
+      background: rgba(211, 211, 211, 1);
+      border-radius: 5px;
+    }
+    .contenido::-webkit-scrollbar-thumb{
+      background: rgba(128, 128, 128, 1);
+      border-radius: 5px;
     }
     .movie-list{
       height: auto;
       width: auto;
       display: grid;
-      grid-template-columns: [start] 400px 400px 400px [end];
+      grid-template-columns: [start] 400px 400px 400px 400px [end];
       grid-template-rows: repeat(6, 50px 200px);
       grid-gap: 10px;
       margin: 20px;
@@ -190,7 +202,6 @@ body{
       overflow: hidden;
     }
     .movie-container{   
-      background-color: khaki;
       height: 100%;
       margin: 0;
     }
@@ -202,14 +213,14 @@ body{
       position: absolute;
       left: 0;
       right: 0;
-      top: 50%;
+      top: 40%;
       bottom: 0;
       display: none;
       align-items: center;
       justify-content: left;
       color: white;
       text-align: left;
-      height: 86px;
+      height: 100%
       margin: 0;
       padding: 7px;
       grid-template-rows: 30% 70%;
