@@ -60,7 +60,7 @@ body{
 }
 
 .item{
-  border: 1px solid black;
+/*   border: 1px solid black; */
   padding: 10px;
 }
 
@@ -71,7 +71,7 @@ body{
   padding: 0;
 }
     .logo{
-      height: 70px;
+      height: 90px;
       margin: 0;
       padding: 5px;
       align-self: center;
@@ -81,7 +81,7 @@ body{
       height: inherit;
     }
     .cabecera{
-      background-color: lavender;
+      box-shadow: 0 0 8px 0 rgba(0,0,0, .4);
       display: grid;
       grid-template-columns: 1fr 50% 1fr;
       height: 100%;
@@ -104,7 +104,7 @@ body{
     .acount{
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
     }
     .profilepic{
       width: 50px;
@@ -112,10 +112,12 @@ body{
       border-radius: 25px;
       border: 1px solid black;
       overflow: hidden;
+      margin: 0;
+      margin-left: 10px;
     }
     .profilepic-img{
-      width: 50px;
-      height: 50px;
+      width: 52px;
+      height: 52px;
     }
 
 .item:nth-of-type(2){
@@ -130,6 +132,8 @@ body{
       height: 100%;
       display: block;
       align-content: center;
+      color: white;
+      background: -webkit-linear-gradient(left, rgba(250,0,0,1) 0%, rgba(255,87,87,1) 64%, rgba(252,104,104,1) 100%);
     }
     .windows{
       height: 100%;
@@ -177,7 +181,6 @@ body{
       grid-template-columns: [start] 400px 400px 400px [end];
       grid-template-rows: repeat(6, 50px 200px);
       grid-gap: 10px;
-
       margin: 20px;
     }
     .movie-link{
@@ -195,7 +198,7 @@ body{
       width: 100%;
     }
     .movie-overlay{
-      background: rgba(255, 0, 0, 0.4);
+      background: rgba(17, 17, 17, 0.5);
       position: absolute;
       left: 0;
       right: 0;
